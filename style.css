@@ -1,0 +1,49 @@
+@font-face {
+    font-family:inter ;
+    src: url(./Inter-SemiBold.ttf);
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: inter;
+}
+img{
+    height:40px;
+    width:40px ;
+}
+.content{
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    
+}
+span,a,button{
+    margin: 10px 20px;
+    text-decoration: none;
+    /* font-size: ; */
+}
+body{
+    background: rgb(17,2,56);
+}
+button{
+    padding: 6px;
+    border-radius: 20px;
+    background-color: gainsboro;
+    border: none;
+    color: grey;
+    cursor: pointer;
+}
+button:hover{
+    background-color: grey;
+    color: white;
+}
+span,a{
+    color: gainsboro;
+}
+
+
+
+    
