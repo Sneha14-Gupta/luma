@@ -26,7 +26,7 @@ span,a,button{
     /* font-size: ; */
 }
 body{
-    background: rgb(17,2,56);
+    background: rgba(17, 2, 56, 0.741);
 }
 button{
     padding: 6px;
