@@ -1,0 +1,154 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+header,
+main,
+footer {
+  padding: 14px;
+}
+main,
+footer {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+body {
+  font-family: Inter, sans-serif;
+  background-color: #7a7adb;
+  background-image: linear-gradient(277deg, #602f60 0%, #170e13 74%);
+  color: white;
+  min-height: 100vh;
+}
+header a,
+footer a {
+  text-decoration: none;
+  color: inherit;
+}
+.flex {
+  display: flex;
+}
+/*
+    MARK: Header
+*/
+header {
+  justify-content: space-between;
+}
+
+header .ic {
+  width: 20px;
+}
+
+header nav {
+  gap: 16px;
+}
+nav button {
+  padding: 5px 10px;
+  font-size: 10px;
+  background: whitesmoke;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+}
+@media screen and(max-width:650px) {
+  header p {
+    display: none;
+  }
+}
+/* Main */
+main {
+  justify-content: space-between;
+}
+.left {
+  flex-basis: 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: start;
+  margin: 10% 10% 10% 10%;
+}
+.left svg {
+  height: 25px;
+  color: whitesmoke;
+}
+.left h1 {
+  font-size: 50px;
+  line-height: 1;
+  font-weight: 600;
+}
+.left .gradient {
+  background: radial-gradient(
+    circle at top left,
+    #099ef1 0%,
+    #6863f8 18.82%,
+    #d84ffa 32.6%,
+    #f058c5 52.83%,
+    #ff4f90 68.03%,
+    #ff6558 87.66%,
+    #ff891f 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.left {
+  p {
+    font-size: 20px;
+    font-weight: 500;
+  }
+}
+
+.left button {
+  padding: 10px 20px;
+  font-size: 20px;
+  background: whitesmoke;
+  border: none;
+  border-radius: 10px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.right {
+  flex-basis: 60%;
+}
+.right video {
+  width: 100%;
+}
+@media screen and (max-width: 650px) {
+  main {
+    flex-direction: column;
+    gap: 40px;
+  }
+  .left {
+    text-align: center;
+    align-items: center;
+  }
+  .left,
+  .right {
+    flex-basis: 100%;
+  }
+}
+/* footer */
+footer{
+  border-top:1px solid white;
+  width:60%;
+  margin-left: 20%;
+
+}
+footer svg{
+  width:50px;
+  color: white;
+}
+footer .primary{
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.primary a{
+  margin: 10px;
+}
+.secondary a{
+  margin:10px 10px 10px -2px;
+
+}
+
