@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 @import url(resets.css);
 @import url(fonts.css);
 
@@ -21,21 +28,29 @@ footer a {
   color: inherit;
 }
 .flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 /*
     MARK: Header
 */
 header {
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   margin-bottom: 10%;
 }
 
 header .ic {
   width: 20px;
   cursor: pointer;
+  -webkit-transition: 1s;
+  -o-transition: 1s;
   transition: 1s;
-  transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+      -ms-transform: scale(1.2);
+          transform: scale(1.2);
   color:var(--gray-white);
 
 }
@@ -48,7 +63,7 @@ header nav {
   gap: 16px;
 }
 /* header a{
-  color: var(--gray-white);
+  -webkit-transform-origin-y: 1;
 } */
 
 nav button {
@@ -70,15 +85,26 @@ nav button:hover{
 }
 /* Main */
 main {
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 .left {
-  flex-basis: 40%;
+  -ms-flex-preferred-size: 40%;
+      flex-basis: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   gap: 30px;
-  align-items: start;
-  margin: 10% 10% 10% 10%;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  margin: 50px 10px ;
+  /* margin-left: 30px; */
   
 }
 .left svg {
@@ -86,11 +112,22 @@ main {
   color: whitesmoke;
 }
 .left h1 {
-  font-size: 50px;
+  font-size: 70px;
   line-height: 1;
   font-weight: 600;
 }
 .left .gradient {
+  background: -o-radial-gradient(
+    top left,
+    circle,
+    #099ef1 0%,
+    #6863f8 18.82%,
+    #d84ffa 32.6%,
+    #f058c5 52.83%,
+    #ff4f90 68.03%,
+    #ff6558 87.66%,
+    #ff891f 100%
+  );
   background: radial-gradient(
     circle at top left,
     #099ef1 0%,
@@ -107,8 +144,9 @@ main {
 .left {
   p {
     font-size: 20px;
-    font-weight: 500;
+    font-weight: 400;
     color: var(--gray-white);
+    line-height: 1.4;
   }
 }
 
@@ -120,6 +158,7 @@ main {
   border-radius: 10px;
   font-weight: 500;
   cursor: pointer;
+  margin-top: 16px;
 }
 .left button:hover{
   background-color: var(--gray-white);
@@ -127,23 +166,33 @@ main {
 }
 
 .right {
-  flex-basis: 60%;
+  -ms-flex-preferred-size: 60%;
+      flex-basis: 60%;
+  margin:0px 20px  40px 10px;
 }
 .right video {
   width: 100%;
+  
+ 
 }
 @media screen and (max-width: 650px) {
   main {
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     gap: 40px;
   }
   .left {
     text-align: center;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .left,
   .right {
-    flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
   }
 }
 /* footer */
@@ -152,6 +201,8 @@ footer{
   width:70%;
   margin-left: 15%;
   margin-top: 30px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 
 }
 footer svg{
@@ -159,7 +210,9 @@ footer svg{
   color: white;
 }
 footer .primary{
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   margin-bottom: 10px;
 }
 .primary a{
@@ -169,4 +222,3 @@ footer .primary{
   margin:10px 10px 10px -2px;
 
 }
-
